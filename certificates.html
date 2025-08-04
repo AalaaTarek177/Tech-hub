@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Certificates</title>
+  <link rel="icon" href="imgs/certificaint.jpeg" type="image/svg+xml">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #cdd6fa;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #4920af;
+    }
+
+    .cert-card {
+      background: white;
+      border: 2px solid #6a82fb;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .cert-card h2 {
+      color: #6a82fb;
+    }
+    
+    .image{
+      text-align: left;
+      margin: 30px auto;
+      
+    }
+    .image img{
+      max-width: 400px;
+      height: auto;
+      border-radius: 55%;
+    }
+    .delete-btn {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      transition: background 0.3s;
+    }
+
+    .delete-btn:hover {
+      background-color: #d93636;
+    }
+
+    .back-home-btn {
+      text-align: center;
+      margin: 100px 0;
+    }
+
+    .back-home-btn a {
+      background-color: #6c63ff;
+      color: white;
+      padding: 10px 20px;      
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    .back-home-btn a:hover {
+      background-color: #574fd6;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎓 My Certificates</h1>
+  <div id="certificatesContainer"></div>
+  <div class="image">
+    <img src="imgs/undraw_certification_i2m0.svg">
+  </div>
+
+  <div class="back-home-btn">
+    <a href="home.html">Back to Home</a>
+  </div>
+
+  <script>
+    const container = document.getElementById("certificatesContainer");
+
+    function loadCertificates() {
+      container.innerHTML = "";
+      const certs = JSON.parse(localStorage.getItem("certificates")) || [];
+
+      if (certs.length === 0) {
+        container.innerHTML = "<p>You haven't earned any certificates yet.</p>";
+        return;
+      }
+
+      certs.forEach((cert, index) => {
+        const certElement = document.createElement("div");
+        certElement.className = "cert-card";
+        certElement.innerHTML = `
+          <h2>🏆 Certificate of Completion</h2>
+          <p>This certifies that you have successfully completed the <strong>${cert.name}</strong> course.</p>
+          <p>Date: ${cert.date}</p>
+          <button class="delete-btn" onclick="deleteCertificate(${index})">Delete</button>
+        `;
+        container.appendChild(certElement);
+      });
+    }
+
+    function deleteCertificate(index) {
+      let certs = JSON.parse(localStorage.getItem("certificates")) || [];
+      certs.splice(index, 1);
+      localStorage.setItem("certificates", JSON.stringify(certs));
+      loadCertificates();
+    }
+
+    loadCertificates();
+  </script>
+</body>
+</html>

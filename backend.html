@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Backend Track</title>
+  <link rel="icon" href="imgs/backend.jpeg" type="image/svg+xml">
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #c9cef6;
+      margin: 0;
+      padding: 2rem;
+    }
+    .track {
+      max-width: 900px;
+      margin: auto;
+      background: rgb(232, 230, 239);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    .track-icon {
+      display: block;
+      margin: 0 auto 1rem auto;
+      width: 80px;
+      height: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    p.intro {
+      text-align: center;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+    .card-section {
+      background-color: #d4daff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .card-section h2 {
+      color: #34495e;
+      margin-bottom: 1rem;
+    }
+    .card-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card-section li {
+      padding-left: 2rem;
+      position: relative;
+      margin-bottom: 0.8rem;
+      color: #2c2f35;
+    }
+    .learn li::before { content: "📘"; position: absolute; left: 0; }
+    .how li::before { content: "🧪"; position: absolute; left: 0; }
+    .skills li::before { content: "💡"; position: absolute; left: 0; }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1.2rem;
+      background: #423aaf;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+    a:hover {
+      background: #0f2450;
+    }
+  </style>
+</head>
+<body>
+  <div class="track">
+    <img src="imgs/backend-coding.png" alt="Backend Icon" class="track-icon" />
+    <h1>Backend Development</h1>
+    <p class="intro">Design, build, and maintain server-side logic and databases for scalable web apps.</p>
+
+    <div class="card-section learn">
+      <h2>What You Will Learn</h2>
+      <ul>
+        <li>Node.js, Express, or Django</li>
+        <li>Database systems (SQL, MongoDB)</li>
+        <li>RESTful APIs & authentication</li>
+        <li>Server deployment (Heroku, Render)</li>
+      </ul>
+    </div>
+
+    <div class="card-section how">
+      <h2>How You Will Learn</h2>
+      <ul>
+        <li>Hands-on backend projects</li>
+        <li>API development tasks</li>
+        <li>Database schema design</li>
+      </ul>
+    </div>
+
+    <div class="card-section skills">
+      <h2>Skills You Will Acquire</h2>
+      <ul>
+        <li>API design and integration</li>
+        <li>Server-side security</li>
+        <li>Authentication & middleware</li>
+      </ul>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="home.html">← Back to Tracks</a>
+      <a href="coureses.html">View All Courses</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Hub Stats</title>
+  <link rel="icon" href="imgs/statistics.jpeg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #242954;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 40px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background-color: #282141;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .stat-card h2 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #58a6ff;
+    }
+
+    .stat-card p {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #c9d1d9;
+    }
+
+    .home-btn {
+      background-color: #403a91;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .home-btn:hover {
+      background-color: #242058;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Tech Hub Statistics</h1>
+
+    <div class="stats">
+      <div class="stat-card">
+        <h2 id="students">0</h2>
+        <p>Students Enrolled</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="courses">0</h2>
+        <p>Courses Available</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="ratings">0</h2>
+        <p>Average Rating</p>
+      </div>
+      <div class="stat-card">
+        <h2 id="instructors">0</h2>
+        <p>Expert Instructors</p>
+      </div>
+    </div>
+
+    <a href="home.html" class="home-btn"> Back to Home</a>
+  </div>
+
+  <script>
+    const counters = {
+      students: 1500,
+      courses: 25,
+      ratings: 4.8,
+      instructors: 4,
+    };
+
+    for (const id in counters) {
+      const el = document.getElementById(id);
+      let current = 0;
+      const goal = counters[id];
+      const isDecimal = typeof goal === 'number' && !Number.isInteger(goal);
+      const increment = goal / 100;
+
+      const updateCounter = () => {
+        current += increment;
+        if (current >= goal) {
+          el.textContent = isDecimal ? goal.toFixed(1) : goal;
+        } else {
+          el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+          requestAnimationFrame(updateCounter);
+        }
+      };
+      updateCounter();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="icon" href="imgs/contact.jpeg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="contact.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+  <div class="logo">🚀 Tech-Hub</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="coureses.html">Courses</a>
+    <a href="progress.html">Progress</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">👤 Account ▼</button>
+      <div class="dropdown-content">
+        <a href="userProfile.html">Profile</a>
+        <a href="Mentors.html">Our Mentors</a>
+        <a href="subscribtion.html">Subscribe</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="stats.html">Statistics</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <section class="contact-hero">
+  <h1> Contact Us</h1>
+  <p>Have questions or feedback? We’d love to hear from you!</p>
+</section>
+
+<div class="contact-wrapper">
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="6" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="contact-image">
+    <img src="imgs/undraw_modern-design_yur1.svg" alt="Contact Illustration">
+  </div>
+</div>
+
+
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<div id="chatBox" class="chatBox">
+  <div class="chat-header">TechHub Chatbot 🤖</div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button id="sendBtn">Send</button>
+  </div>
+</div>
+
+
+<div class="contact-social">
+  <a href="#"><i class="fab fa-facebook"></i></a>
+  <a href="#"><i class="fab fa-github"></i></a>
+  <a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>TECH-HUB</h2>
+      <p>Learn programming tracks  — explore web, mobile, AI, and more!</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="home.html">Tracks</a></li>
+        <li><a href="AboutUs.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="search.html">Search</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <ul>
+        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 TECH-HUB . All Rights Reserved .</p>
+  </div>
+</footer>
+<script src="contact.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tech Quiz</title>
+  <link rel="icon" href="imgs/question_7088167.png" type="image/svg+xml">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: rgb(178, 185, 238);
+      margin: 0;
+      color: #333;
+    }
+
+     .navbar {
+  background-color: #1e1e30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  color: #bfcaff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links a, .dropbtn {
+  font-size: 14px;
+  color: rgb(187, 231, 231);
+  padding: 8px 16px;
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: monospace;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn{
+  background-color: #1e1e30;
+}
+.nav-links a:hover, .dropbtn:hover {
+  background-color: #5757a0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2c2c48;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(187, 231, 231);
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #4e4e7f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+     
+     h1{
+        text-align: center;
+        color:#2a2a5f ;
+        margin: 30px auto;
+     }
+    .quiz-box {
+      background-color: #d3d4f2;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 2rem auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #2a2a5f;
+    }
+
+    .question {
+      margin-bottom: 1.2rem;
+    }
+
+    label {
+      display: block;
+      margin: 6px 0;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      background-color: #5468ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #3d51e3;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    
+  .back-btn {
+    display: inline-block;
+    margin: 0 1rem;
+    margin-bottom: 30px;
+    padding: 0.6rem 1.2rem;
+    background-color: #4060ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-btn:hover {
+    background-color: #3144b1;
+  }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+  <div class="logo">🚀 Tech-Hub</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="coureses.html">Courses</a>
+    <a href="progress.html">Progress</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">👤 Account ▼</button>
+      <div class="dropdown-content">
+        <a href="userProfile.html">Profile</a>
+        <a href="Mentors.html">Our Mentors</a>
+        <a href="subscribtion.html">Subscribe</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="stats.html">Statistics</a>
+      </div>
+    </div>
+  </div>
+</nav>
+    <h1> CHECK YOURSELF </h1>
+
+  <div class="quiz-box">
+    <h2>💻 Web Development</h2>
+    <div class="question">
+      <p>What does CSS stand for?</p>
+      <label><input type="radio" name="web" value="a"> Computer Style Sheet</label>
+      <label><input type="radio" name="web" value="b"> Creative Style Sheet</label>
+      <label><input type="radio" name="web" value="c"> Cascading Style Sheets</label>
+      <label><input type="radio" name="web" value="d"> Colorful Style Sheet</label>
+    </div>
+    <button onclick="checkAnswer('web', 'c', 'result1')">Check Answer</button>
+    <p class="result" id="result1"></p>
+  </div>
+
+  <div class="quiz-box">
+    <h2>🎮 Game Development</h2>
+    <div class="question">
+      <p>Which engine is widely used for creating 2D & 3D games?</p>
+      <label><input type="radio" name="game" value="a"> Figma</label>
+      <label><input type="radio" name="game" value="b"> Unity</label>
+      <label><input type="radio" name="game" value="c"> Blender</label>
+      <label><input type="radio" name="game" value="d"> Photoshop</label>
+    </div>
+    <button onclick="checkAnswer('game', 'b', 'result2')">Check Answer</button>
+    <p class="result" id="result2"></p>
+  </div>
+  <div class="quiz-box">
+  <h2>📊 Data Science</h2>
+  <div class="question">
+    <p>Which of the following is used for data analysis in Python?</p>
+    <label><input type="radio" name="data" value="a"> NumPy</label>
+    <label><input type="radio" name="data" value="b"> React</label>
+    <label><input type="radio" name="data" value="c"> Django</label>
+    <label><input type="radio" name="data" value="d"> Node.js</label>
+  </div>
+  <button onclick="checkAnswer('data', 'a', 'result4')">Check Answer</button>
+  <p class="result" id="result4"></p>
+</div>
+
+<div class="quiz-box">
+  <h2>🛡️ Cyber Security</h2>
+  <div class="question">
+    <p>What does the term “phishing” refer to?</p>
+    <label><input type="radio" name="cyber" value="a"> Data encryption technique</label>
+    <label><input type="radio" name="cyber" value="b"> Virus removal tool</label>
+    <label><input type="radio" name="cyber" value="c"> Fraudulent attempt to obtain sensitive data</label>
+    <label><input type="radio" name="cyber" value="d"> Software update</label>
+  </div>
+  <button onclick="checkAnswer('cyber', 'c', 'result5')">Check Answer</button>
+  <p class="result" id="result5"></p>
+</div>
+
+<div class="quiz-box">
+  <h2>🤖 Artificial Intelligence</h2>
+  <div class="question">
+    <p>Which of these is a type of AI that learns from data?</p>
+    <label><input type="radio" name="ai" value="a"> Static Programming</label>
+    <label><input type="radio" name="ai" value="b"> Machine Learning</label>
+    <label><input type="radio" name="ai" value="c"> HTML</label>
+    <label><input type="radio" name="ai" value="d"> JSON</label>
+  </div>
+  <button onclick="checkAnswer('ai', 'b', 'result6')">Check Answer</button>
+  <p class="result" id="result6"></p>
+</div>
+
+
+  <div class="quiz-box">
+    <h2>📱 Mobile App Development</h2>
+    <div class="question">
+      <p>Which language is used with Flutter framework?</p>
+      <label><input type="radio" name="mobile" value="a"> Java</label>
+      <label><input type="radio" name="mobile" value="b"> Kotlin</label>
+      <label><input type="radio" name="mobile" value="c"> Dart</label>
+      <label><input type="radio" name="mobile" value="d"> Swift</label>
+    </div>
+    <button onclick="checkAnswer('mobile', 'c', 'result3')">Check Answer</button>
+    <p class="result" id="result3"></p>
+  </div>
+
+  <div style="text-align: center; margin-top: 3rem;">
+  <a href="coureses.html" class="back-btn">← Back to Courses</a>
+  <a href="home.html" class="back-btn"> Home</a>
+  </div>
+
+
+  <script>
+    function checkAnswer(groupName, correct, resultId) {
+      const options = document.getElementsByName(groupName);
+      let selected = "";
+      for (let i = 0; i < options.length; i++) {
+        if (options[i].checked) {
+          selected = options[i].value;
+          break;
+        }
+      }
+
+      const result = document.getElementById(resultId);
+      if (selected === "") {
+        result.textContent = "Please select an answer first!";
+        result.style.color = "orange";
+      } else if (selected === correct) {
+        result.textContent = "Correct! 🎉";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Wrong answer ❌";
+        result.style.color = "red";
+      }
+    }
+  </script>
+
+</body>
+</html>

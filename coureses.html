@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Courses</title>
+  <link rel="stylesheet" href="coureses.css" />
+  <link rel="icon" href="imgs/course.png" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🚀 Tech-Hub</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="coureses.html">Courses</a>
+      <a href="progress.html">Progress</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="AboutUs.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">👤 Account ▼</button>
+        <div class="dropdown-content">
+          <a href="userProfile.html">Profile</a>
+          <a href="Mentors.html">Our Mentors</a>
+          <a href="subscribtion.html">Subscribe</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="stats.html">Statistics</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <h1 class="main-title">View Our Programming Tracks 💻</h1>
+
+  <div class="courses-wrapper">
+    
+    <div class="course-card">
+      <h2>Frontend Development</h2>
+      <p>Learn to build modern websites using HTML, CSS, and JavaScript.</p>
+      <button onclick="startCourse('Frontend Development')">Start Course</button>
+    </div>
+    
+    <div class="course-card image-card">
+      <img src="imgs/undraw_programmer_raqr.svg" alt="Programmer Illustration" />
+    </div>
+
+
+    <div class="course-card">
+      <h2>Backend Development</h2>
+      <p>Master backend technologies like Node.js, Express, and databases.</p>
+      <button onclick="startCourse('Backend Development')">Start Course</button>
+    </div>
+
+    <div class="course-card">      
+      <h2>Data Science</h2>
+      <p>Dive into data analysis, Python, Pandas, and machine learning.</p>
+      <button onclick="startCourse('Data Science')">Start Course</button>
+    </div>
+
+    <div class="course-card">
+      <h2>Mobile App Development</h2>
+      <p>Build mobile apps with Flutter and React Native frameworks.</p>
+      <button onclick="startCourse('Mobile App Development')">Start Course</button>
+    </div>
+
+    <div class="course-card">
+      <h2>Game Development</h2>
+      <p>Create fun 2D & 3D games using Unity or Godot game engines.</p>
+      <button onclick="startCourse('Game Development')">Start Course</button>
+    </div>
+
+    <div class="course-card">  
+      <h2>Cyber Security</h2>
+      <p>Learn how to protect systems, networks, and data from cyber threats.</p>
+      <button onclick="startCourse('Cybersecurity')">Start Course</button>
+    </div>
+
+    <div class="course-card">
+      <h2>Artificial Intelligence</h2>
+      <p>Explore machine learning, deep learning, and intelligent systems.</p>  
+      <button onclick="startCourse('Artificial Intelligence')">Start Course</button>
+    </div>
+
+    <div class="course-card">
+      <h2>DevOps Engineering</h2>
+      <p>Understand CI/CD, automation, and infrastructure tools like Docker.</p>
+      <button onclick="startCourse('DevOps Engineering')">Start Course</button>
+    </div>
+   
+    
+  </div>
+
+  <div class="review-button">
+    <a href="reviews.html">📝 Review Our Courses</a>
+    <a href="quiz.html" class="quiz-button">Test Yourself Now🧠</a>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h2>TECH-HUB</h2>
+        <p>Learn programming tracks — explore web, mobile, AI, and more!</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="home.html">Tracks</a></li>
+          <li><a href="AboutUs.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search.html">Search</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 TECH-HUB . All Rights Reserved </p>
+    </div>
+  </footer>
+
+  <script src="coureses.js"></script>
+</body>
+</html>

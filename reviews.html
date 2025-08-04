@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Reviews</title>
+  <link rel="icon" href="imgs/review_6452443.png" type="image/svg+xml">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #cfcfef;
+      margin: 0;
+      color: #333;
+    }
+
+     .navbar {
+  background-color: #1e1e30;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  color: #bfcaff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links a, .dropbtn {
+  font-size: 14px;
+  color: rgb(187, 231, 231);
+  padding: 8px 16px;
+  margin-left: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: monospace;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn{
+  background-color: #1e1e30;
+}
+.nav-links a:hover, .dropbtn:hover {
+  background-color: #5757a0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2c2c48;
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(187, 231, 231);
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #4e4e7f;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+     
+     h1{
+        text-align: center;
+        color: #5e60ce;
+
+     }
+    .review-section {
+      background: rgb(216, 213, 235);
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #1d0f2e;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .stars span {
+      transition: transform 0.2s;
+    }
+
+    .stars span:hover,
+    .stars span.selected {
+      color: gold;
+      transform: scale(1.2);
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      padding:10px 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;      
+      resize: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #5e60ce;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #494bbd;
+    }
+
+    .thanks-message {
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+     .back-btn {
+    display: inline-block;
+    margin: 30px 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #4060ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .back-btn:hover {
+    background-color: #3144b1;
+  }
+   
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+  <div class="logo">🚀 Tech-Hub</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="coureses.html">Courses</a>
+    <a href="progress.html">Progress</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="AboutUs.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">👤 Account ▼</button>
+      <div class="dropdown-content">
+        <a href="userProfile.html">Profile</a>
+        <a href="Mentors.html">Our Mentors</a>
+        <a href="subscribtion.html">Subscribe</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="stats.html">Statistics</a>
+      </div>
+    </div>
+  </div>
+</nav>
+    <h1>Your feedback means a lot to us </h1>
+
+  <div class="review-section" data-course="Web Development">
+    <h2>Web Development</h2>
+    <div class="stars" id="stars-web"></div>
+    <textarea placeholder="Write your review here..."></textarea>
+    <button onclick="submitReview('web')">Submit Review</button>
+    <div class="thanks-message" id="thanks-web"></div>
+  </div>
+
+  <div class="review-section" data-course="Data Science">
+    <h2>Data Science</h2>
+    <div class="stars" id="stars-data"></div>
+    <textarea placeholder="Write your review here..."></textarea>
+    <button onclick="submitReview('data')">Submit Review</button>
+    <div class="thanks-message" id="thanks-data"></div>
+  </div>
+
+  <div class="review-section" data-course="Mobile App Development">
+    <h2>Mobile App Development</h2>
+    <div class="stars" id="stars-mobile"></div>
+    <textarea placeholder="Write your review here..."></textarea>
+    <button onclick="submitReview('mobile')">Submit Review</button>
+    <div class="thanks-message" id="thanks-mobile"></div>
+  </div>
+
+  <div class="review-section" data-course="Game Development">
+    <h2>Game Development</h2>
+    <div class="stars" id="stars-game"></div>
+    <textarea placeholder="Write your review here..."></textarea>
+    <button onclick="submitReview('game')">Submit Review</button>
+    <div class="thanks-message" id="thanks-game"></div>
+  </div>
+
+  <div class="review-section" data-course="Cyber Security">
+    <h2>Cyber Security</h2>
+    <div class="stars" id="stars-cyber"></div>
+    <textarea placeholder="Write your review here..."></textarea>
+    <button onclick="submitReview('cyber')">Submit Review</button>
+    <div class="thanks-message" id="thanks-cyber"></div>
+  </div>
+
+  <div class="review-section" data-course="AI & Machine Learning">
+    <h2>AI & Machine Learning</h2>
+    <div class="stars" id="stars-ai"></div>
+    <textarea placeholder="Write your review here..."></textarea>
+    <button onclick="submitReview('ai')">Submit Review</button>
+    <div class="thanks-message" id="thanks-ai"></div>
+  </div>
+
+  <div class="review-section" data-course="DevOps">
+    <h2>DevOps</h2>
+    <div class="stars" id="stars-devops"></div>
+    <textarea placeholder="Write your review here..."></textarea>
+    <button onclick="submitReview('devops')">Submit Review</button>
+    <div class="thanks-message" id="thanks-devops"></div>
+  </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+    <a href="coureses.html" class="back-btn">← Back to Courses</a>
+    <a href="home.html" class="back-btn"> Home</a>
+    </div>
+
+  <script>
+    const courseIds = ['web', 'data', 'mobile', 'game', 'cyber', 'ai', 'devops'];
+
+    courseIds.forEach(id => {
+      const starContainer = document.getElementById(`stars-${id}`);
+      for (let i = 1; i <= 5; i++) {
+        const star = document.createElement('span');
+        star.innerHTML = '★';
+        star.setAttribute('data-rate', i);
+        star.addEventListener('click', () => {
+          const stars = starContainer.querySelectorAll('span');
+          stars.forEach(s => s.classList.remove('selected'));
+          for (let j = 0; j < i; j++) {
+            stars[j].classList.add('selected');
+          }
+        });
+        starContainer.appendChild(star);
+      }
+    });
+
+    function submitReview(courseId) {
+      const stars = document.querySelectorAll(`#stars-${courseId} span.selected`);
+      if (stars.length === 0) {
+        alert("Please select a rating before submitting.");
+        return;
+      }
+      document.getElementById(`thanks-${courseId}`).textContent = "Thanks for your review! ⭐";
+    }
+  </script>
+</body>
+</html>

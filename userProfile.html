@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="icon" href="imgs/user.jpeg" type="image/svg+xml">
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      background-color: #16182c;
+      color: #f0f0f0;
+    }
+
+    .profile-wrapper {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #292942;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .top-section {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-image: url('imgs/clipart-female-user-icon-256x256-819e.png');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid #888;
+    }
+
+    .info {
+      flex-grow: 1;
+    }
+
+    .info h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .info p {
+      margin-top: 0.4rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .section {
+      margin-top: 2rem;
+    }
+
+    .section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #90c6ff;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.4rem;
+    }
+
+    .section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .section ul li {
+      background-color: #414163;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .btn {
+      background-color: #493e83;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #3c2885;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <div class="profile-wrapper">
+    <div class="top-section">
+      <div class="profile-img"></div>
+      <div class="info">
+        <h1>Rawda Mahmoud</h1>
+        <p>Year 1 FCAI Student</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>My Courses</h2>
+      <ul>
+        <li>Frontend Basics</li>
+        <li>JavaScript Essentials</li>
+        <li>Cybersecurity Intro</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>My Certificates</h2>
+      <p>🎓 View your earned certificates below:</p>
+      <a href="certificates.html" class="btn">View Certificates</a>
+    </div>
+
+    <div class="buttons">
+      <button class="btn">✏️ Edit Info</button>
+      <a href="home.html" type="button" class="btn" >Home</a>
+    </div>
+  </div>
+
+</body>
+</html>

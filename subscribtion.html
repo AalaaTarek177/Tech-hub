@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subscription Plans - Tech Hub</title>
+  <link rel="icon" href="imgs/subscribe.jpeg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #242954;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #58a6ff;
+      margin-bottom: 40px;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .plan {
+      background-color: #1a0c32;
+      border: 2px solid #30363d;
+      border-radius: 10px;
+      padding: 30px 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .plan h2 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .plan .price {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: #c9d1d9;
+    }
+
+    .plan ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .plan ul li {
+      margin-bottom: 10px;
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    
+    .subscribe-btn {
+      background-color: #2e295e;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .subscribe-btn:hover {
+      background-color: #0c144d;
+    }
+
+    .home-btn {
+      margin-top: 40px;
+      background-color: #403a91;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .home-btn:hover {
+      background-color: #242058;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Subscription Plans</h1>
+    <div class="plans">
+      <div class="plan">
+        <h2>💸 Free</h2>
+        <p class="price">$0 / month</p>
+        <ul>
+          <li>✔️ Limited course access</li>
+          <li>✔️ Save progress</li>
+          <li>✔️ No certificate</li>
+        </ul>
+        <a href="#" class="subscribe-btn">Subscribe Now</a>
+      </div>
+
+      <div class="plan">
+        <h2>⭐ Premium</h2>
+        <p class="price">$5 / month</p>
+        <ul>
+          <li>✔️ Full access to all courses</li>
+          <li>✔️ Quizzes and exercises</li>
+          <li>✔️ Certificate after completion</li>
+        </ul>
+        <a href="#" class="subscribe-btn">Subscribe Now</a>
+      </div>
+
+      <div class="plan">
+        <h2>👑 Platinum</h2>
+        <p class="price">$10 / month</p>
+        <ul>
+          <li>✔️ Everything in Premium</li>
+          <li>✔️ 1-on-1 support</li>
+          <li>✔️ Exclusive events and content</li>
+        </ul>
+        <a href="#" class="subscribe-btn">Subscribe Now</a>
+      </div>
+    </div>
+
+    <a href="home.html" class="home-btn"> Back to Home</a>
+  </div>
+</body>
+</html>
